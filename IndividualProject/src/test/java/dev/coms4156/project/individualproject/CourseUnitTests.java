@@ -1,10 +1,24 @@
 package dev.coms4156.project.individualproject;
 
-import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 
-import static org.junit.jupiter.api.Assertions.*;
+/**
+ * This class contains unit tests for the {@link Course} class.
+ *
+ * <p>The class sets up a test {@link Course} instance before running any tests </p>
+ *
+ * <p>Tests included:</p>
+ * <ul>
+ *   <li>{@link #toStringTest()} - Verifies that the {@link Course#toString()} method returns the
+ *       expected string representation of the course.</li>
+ * </ul>
+ *
+ */
 
 @SpringBootTest
 @ContextConfiguration
@@ -14,7 +28,6 @@ public class CourseUnitTests {
   public static void setupCourseForTesting() {
     testCourse = new Course("Griffin Newbold", "417 IAB", "11:40-12:55", 250);
   }
-
 
   @Test
   public void toStringTest() {
