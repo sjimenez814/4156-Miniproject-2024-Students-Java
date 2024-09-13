@@ -1,0 +1,121 @@
+Course.java:81:  MissingOverride:        The method 'toString()' is missing an @Override annotation.
+[FIX]: @Override
+
+Department.java:24:      LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+Department.java:55:      LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+Department.java:118:     LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+MyFileDatabase.java:35:  LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+MyFileDatabase.java:44:  LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+MyFileDatabase.java:76:  LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+MyFileDatabase.java:100: LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:79: LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:81: LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:42: LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+IndividualProjectApplication.java:81:    LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+IndividualProjectApplication.java:91:    LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:121:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:123:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:152:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:178:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:212:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:214:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:252:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:254:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:292:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:294:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:322:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:349:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:383:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:385:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:431:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:433:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:470:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:472:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:510:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:512:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:547:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+RouteController.java:549:        LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+[FIX]: Switched to type Map<String, Course>
+
+Department.java:105:     MissingOverride:        The method 'toString()' is missing an @Override annotation.
+[FIX]: @Override
+
+
+IndividualProjectApplication.java:36:    LiteralsFirstInComparisons:     Position literals first in String comparisons
+
+
+MyFileDatabase.java:54:  ReturnEmptyCollectionRatherThanNull:    Return an empty collection rather than null.
+
+RouteController.java:40: UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+
+RouteController.java:45: UseLocaleWithCaseConversions:   When doing a String.toLowerCase()/toUpperCase() call, use a Locale
+RouteController.java:48: UseLocaleWithCaseConversions:   When doing a String.toLowerCase()/toUpperCase() call, use a Locale
+RouteController.java:73: UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+RouteController.java:74: UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+
+RouteController.java:113:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+RouteController.java:114:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+
+RouteController.java:148:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+
+RouteController.java:174:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+
+RouteController.java:204:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+RouteController.java:205:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+
+RouteController.java:244:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+RouteController.java:245:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+
+RouteController.java:284:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+RouteController.java:285:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+
+RouteController.java:318:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+
+RouteController.java:345:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+
+RouteController.java:375:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+RouteController.java:376:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+
+RouteController.java:422:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+RouteController.java:423:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+RouteController.java:424:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+
+RouteController.java:461:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+RouteController.java:462:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+RouteController.java:463:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+
+RouteController.java:501:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+RouteController.java:502:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+RouteController.java:503:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+
+RouteController.java:538:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+RouteController.java:539:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+RouteController.java:540:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
+
+./src/test/java/dev/coms4156/project/individualproject/DepartmentUnitTests.java:39:     LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/DepartmentUnitTests.java:78:     LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/DepartmentUnitTests.java:86:     LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/IndividualProjectApplicationTests.java:75:       CloseResource:  Ensure that resources like this PrintStream object are closed after use
+./src/test/java/dev/coms4156/project/individualproject/IndividualProjectApplicationTests.java:87:       CloseResource:  Ensure that resources like this PrintStream object are closed after use
+./src/test/java/dev/coms4156/project/individualproject/MyFileDatabaseTests.java:51:     LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/MyFileDatabaseTests.java:61:     LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/MyFileDatabaseTests.java:67:     LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/MyFileDatabaseTests.java:75:     LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/MyFileDatabaseTests.java:82:     LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/MyFileDatabaseTests.java:87:     PreserveStackTrace:     Thrown exception does not preserve the stack trace of exception 'e' on all code paths
+./src/test/java/dev/coms4156/project/individualproject/MyFileDatabaseTests.java:93:     LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/MyFileDatabaseTests.java:105:    LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/MyFileDatabaseTests.java:106:    LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/MyFileDatabaseTests.java:111:    LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/RouteControllerTests.java:215:   LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/RouteControllerTests.java:243:   LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/RouteControllerTests.java:262:   LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/RouteControllerTests.java:264:   LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/RouteControllerTests.java:295:   LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/RouteControllerTests.java:297:   LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/RouteControllerTests.java:323:   LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/RouteControllerTests.java:325:   LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/RouteControllerTests.java:352:   LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/RouteControllerTests.java:354:   LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/RouteControllerTests.java:380:   LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
+./src/test/java/dev/coms4156/project/individualproject/RouteControllerTests.java:382:   LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead

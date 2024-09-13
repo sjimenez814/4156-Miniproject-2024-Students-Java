@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.HashMap;
+import java.util.Map;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -36,7 +37,7 @@ public class DepartmentUnitTests {
     Course coms3134 = new Course("Brian Borowski", "417 IAB", "11:40-12:55", 250);
     coms3134.setEnrolledStudentCount(242);
 
-    HashMap<String, Course> testCourses = new HashMap<>();
+    Map<String, Course> testCourses = new HashMap<>();
     testCourses.put("1004", coms1004);
     testCourses.put("3134", coms3134);
 
@@ -75,7 +76,7 @@ public class DepartmentUnitTests {
 
   @Test
   public void testAddCourse() {
-    HashMap<String, Course> oldCourseSelection = new HashMap<>(testDepartment.getCourseSelection());
+    Map<String, Course> oldCourseSelection = new HashMap<>(testDepartment.getCourseSelection());
     testDepartment.addCourse("3157", new Course("Jae Lee", "417 IAB", "11:40-12:55", 400));
     assertNotEquals(oldCourseSelection, testDepartment.getCourseSelection());
     assertEquals(oldCourseSelection.size() + 1, testDepartment.getCourseSelection().size());
@@ -83,7 +84,7 @@ public class DepartmentUnitTests {
 
   @Test
   public void testCreateCourse() {
-    HashMap<String, Course> oldCourseSelection = new HashMap<>(testDepartment.getCourseSelection());
+    Map<String, Course> oldCourseSelection = new HashMap<>(testDepartment.getCourseSelection());
     testDepartment.createCourse("3157", "Jae Lee", "417 IAB", "11:40-12:55", 400);
     assertNotEquals(oldCourseSelection, testDepartment.getCourseSelection());
     assertEquals(oldCourseSelection.size() + 1, testDepartment.getCourseSelection().size());
