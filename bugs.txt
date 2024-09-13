@@ -40,7 +40,6 @@ RouteController.java:549:        LooseCoupling:  Avoid using implementation type
 Department.java:105:     MissingOverride:        The method 'toString()' is missing an @Override annotation.
 [FIX]: @Override
 
-
 RouteController.java:74: UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
 RouteController.java:113:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
 RouteController.java:114:        UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
@@ -81,7 +80,6 @@ RouteController.java:40: UnnecessaryAnnotationValueElement:      Avoid the use o
 RouteController.java:45: UseLocaleWithCaseConversions:   When doing a String.toLowerCase()/toUpperCase() call, use a Locale
 RouteController.java:48: UseLocaleWithCaseConversions:   When doing a String.toLowerCase()/toUpperCase() call, use a Locale
 RouteController.java:73: UnnecessaryAnnotationValueElement:      Avoid the use of value in annotations when its the only element
-
 
 ./src/test/java/dev/coms4156/project/individualproject/DepartmentUnitTests.java:39:     LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
 ./src/test/java/dev/coms4156/project/individualproject/DepartmentUnitTests.java:78:     LooseCoupling:  Avoid using implementation types like 'HashMap'; use the interface instead
