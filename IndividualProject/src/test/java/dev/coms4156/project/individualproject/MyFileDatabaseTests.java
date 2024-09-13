@@ -2,7 +2,6 @@ package dev.coms4156.project.individualproject;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.File;
@@ -44,14 +43,14 @@ public class MyFileDatabaseTests {
   @Test
   public void testConstructorWithFlagZero() {
     myFileDatabase = new MyFileDatabase(0, filePath);
-    assertNull(myFileDatabase.getDepartmentMapping());
+    assertEquals(new HashMap<>(), myFileDatabase.getDepartmentMapping());
   }
 
   @Test
   public void testSetMapping() {
     Map<String, Department> mapping = new HashMap<>();
     mapping.put("COMS", new Department("COMS", null, "Brian Borowski", 100));
-    myFileDatabase.setMapping((HashMap<String, Department>) mapping);
+    myFileDatabase.setMapping(mapping);
     assertNotNull(myFileDatabase.getDepartmentMapping());
     assertEquals(1, myFileDatabase.getDepartmentMapping().size());
     assertTrue(myFileDatabase.getDepartmentMapping().containsKey("COMS"));
@@ -85,15 +84,14 @@ public class MyFileDatabaseTests {
       assertEquals(1, fileMapping.size());
       assertTrue(fileMapping.containsKey("COMS"));
     } catch (ClassNotFoundException e) {
-      throw new IOException();
+      throw new IOException(e);
     }
   }
 
   @Test
   public void testToString() {
     Map<String, Department> mapping = getStringDepartmentHashMap();
-    myFileDatabase.setMapping((HashMap<String, Department>) mapping);
-
+    myFileDatabase.setMapping(mapping);
     String result = myFileDatabase.toString();
     assertEquals("For the COMS department: \n"
         + "COMS 1004: \n"
@@ -104,7 +102,6 @@ public class MyFileDatabaseTests {
   }
 
   private static Map<String, Department> getStringDepartmentHashMap() {
-    Map<String, Department> mapping = new HashMap<>();
     Course coms1004 = new Course("Adam Cannon", "417 IAB", "10:10-11:25", 400);
     coms1004.setEnrolledStudentCount(249);
     Course coms3134 = new Course("Brian Borowski", "417 IAB", "2:40-3:55", 250);
@@ -113,6 +110,7 @@ public class MyFileDatabaseTests {
     courses.put("1004", coms1004);
     courses.put("3134", coms3134);
     Department dept = new Department("COMS", courses, "Jae Lee", 100);
+    Map<String, Department> mapping = new HashMap<>();
     mapping.put("COMS", dept);
     return mapping;
   }
