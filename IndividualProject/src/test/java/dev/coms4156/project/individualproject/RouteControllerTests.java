@@ -3,7 +3,7 @@ package dev.coms4156.project.individualproject;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-import java.util.HashMap;
+import java.util.Map;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -212,7 +212,7 @@ public class RouteControllerTests {
     assertEquals(HttpStatus.OK, testResponse.getStatusCode());
     assertEquals("Attribute was updated successfully", testResponse.getBody());
     int oldMajorCount = 2700;
-    HashMap<String, Department> departmentMapping;
+    Map<String, Department> departmentMapping;
     departmentMapping = IndividualProjectApplication.myFileDatabase.getDepartmentMapping();
     Department specifiedDept = departmentMapping.get("COMS");
     assertEquals(oldMajorCount + 1, specifiedDept.getNumberOfMajors());
@@ -240,7 +240,7 @@ public class RouteControllerTests {
     assertEquals(HttpStatus.OK, testResponse.getStatusCode());
     assertEquals("Attribute was updated or is at minimum", testResponse.getBody());
     int oldMajorCount = 2700;
-    HashMap<String, Department> departmentMapping;
+    Map<String, Department> departmentMapping;
     departmentMapping = IndividualProjectApplication.myFileDatabase.getDepartmentMapping();
     Department specifiedDept = departmentMapping.get("COMS");
     assertEquals(oldMajorCount - 1, specifiedDept.getNumberOfMajors());
@@ -259,9 +259,9 @@ public class RouteControllerTests {
     assertEquals("Course Not Found", testResponse.getBody());
 
     // retrieve a real course
-    HashMap<String, Department> departmentMapping;
+    Map<String, Department> departmentMapping;
     departmentMapping = IndividualProjectApplication.myFileDatabase.getDepartmentMapping();
-    HashMap<String, Course> coursesMapping;
+    Map<String, Course> coursesMapping;
     coursesMapping = departmentMapping.get("COMS").getCourseSelection();
     Course requestedCourse = coursesMapping.get(Integer.toString(1004));
     int oldStudentCount = requestedCourse.getEnrolledStudentCount();
@@ -292,9 +292,9 @@ public class RouteControllerTests {
     assertEquals("Course Not Found", testResponse.getBody());
 
     // retrieve a real course
-    HashMap<String, Department> departmentMapping;
+    Map<String, Department> departmentMapping;
     departmentMapping = IndividualProjectApplication.myFileDatabase.getDepartmentMapping();
-    HashMap<String, Course> coursesMapping;
+    Map<String, Course> coursesMapping;
     coursesMapping = departmentMapping.get("COMS").getCourseSelection();
     Course requestedCourse = coursesMapping.get(Integer.toString(1004));
     int oldStudentCount = requestedCourse.getEnrolledStudentCount();
@@ -320,9 +320,9 @@ public class RouteControllerTests {
     assertEquals("Course Not Found", testResponse.getBody());
 
     // retrieve a real course
-    HashMap<String, Department> departmentMapping;
+    Map<String, Department> departmentMapping;
     departmentMapping = IndividualProjectApplication.myFileDatabase.getDepartmentMapping();
-    HashMap<String, Course> coursesMapping;
+    Map<String, Course> coursesMapping;
     coursesMapping = departmentMapping.get("COMS").getCourseSelection();
     Course requestedCourse = coursesMapping.get(Integer.toString(1004));
     String oldCourseTime = requestedCourse.getCourseTimeSlot();
@@ -349,9 +349,9 @@ public class RouteControllerTests {
 
     // retrieve a real course
 
-    HashMap<String, Department> departmentMapping;
+    Map<String, Department> departmentMapping;
     departmentMapping = IndividualProjectApplication.myFileDatabase.getDepartmentMapping();
-    HashMap<String, Course> coursesMapping;
+    Map<String, Course> coursesMapping;
     coursesMapping = departmentMapping.get("COMS").getCourseSelection();
     Course requestedCourse = coursesMapping.get(Integer.toString(1004));
     String oldTeacher = requestedCourse.getInstructorName();
@@ -377,9 +377,9 @@ public class RouteControllerTests {
     assertEquals("Course Not Found", testResponse.getBody());
 
     // retrieve a real course
-    HashMap<String, Department> departmentMapping;
+    Map<String, Department> departmentMapping;
     departmentMapping = IndividualProjectApplication.myFileDatabase.getDepartmentMapping();
-    HashMap<String, Course> coursesMapping;
+    Map<String, Course> coursesMapping;
     coursesMapping = departmentMapping.get("COMS").getCourseSelection();
     Course requestedCourse = coursesMapping.get(Integer.toString(1004));
     String oldLocation = requestedCourse.getCourseLocation();
