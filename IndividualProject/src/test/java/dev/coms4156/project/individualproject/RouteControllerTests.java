@@ -15,7 +15,6 @@ import org.springframework.test.context.ContextConfiguration;
  * This class contains unit tests for the {@link RouteController} class.
  *
  */
-
 @SpringBootTest
 @ContextConfiguration
 public class RouteControllerTests {

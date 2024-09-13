@@ -290,8 +290,8 @@ public class IndividualProjectApplication implements CommandLineRunner {
       myFileDatabase.saveContentsToFile();
     }
   }
-  //Database Instance
 
+  //Database Instance
   public static MyFileDatabase myFileDatabase;
-  private static boolean saveData = true;
+  static boolean saveData = true;
 }
