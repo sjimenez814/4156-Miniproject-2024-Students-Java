@@ -40,7 +40,7 @@ public class RouteControllerTests {
   public void testRetrieveDepartment() {
     // retrieve a non existing department
     ResponseEntity<?> testResponse = testRouteController.retrieveDepartment("N/A");
-    assertEquals(HttpStatus.OK, testResponse.getStatusCode());
+    assertEquals(HttpStatus.NOT_FOUND, testResponse.getStatusCode());
     assertEquals("Department Not Found", testResponse.getBody());
 
     // retrieve an existing department
@@ -70,8 +70,8 @@ public class RouteControllerTests {
   public void testRetrieveCourse() {
     // retrieve a non existing department
     ResponseEntity<?> testResponse = testRouteController.retrieveCourse("N/A", 9999);
-    assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, testResponse.getStatusCode());
-    assertEquals("An Error has occurred", testResponse.getBody());
+    assertEquals(HttpStatus.NOT_FOUND, testResponse.getStatusCode());
+    assertEquals("Department Not Found", testResponse.getBody());
 
     // retrieve an null department
     testResponse = testRouteController.retrieveCourse(null, 4156);
@@ -109,8 +109,8 @@ public class RouteControllerTests {
   public void testGetMajorCtFromDept() {
     // retrieve a non existing dept
     ResponseEntity<?> testResponse = testRouteController.getMajorCtFromDept("N/A");
-    assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, testResponse.getStatusCode());
-    assertEquals("An Error has occurred", testResponse.getBody());
+    assertEquals(HttpStatus.NOT_FOUND, testResponse.getStatusCode());
+    assertEquals("Department Not Found", testResponse.getBody());
 
     // retrieve a null dept
     testResponse = testRouteController.getMajorCtFromDept(null);
@@ -127,8 +127,8 @@ public class RouteControllerTests {
   public void testIdentifyDeptChair() {
     // retrieve a non existing dept
     ResponseEntity<?> testResponse = testRouteController.identifyDeptChair("N/A");
-    assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, testResponse.getStatusCode());
-    assertEquals("An Error has occurred", testResponse.getBody());
+    assertEquals(HttpStatus.NOT_FOUND, testResponse.getStatusCode());
+    assertEquals("Department Not Found", testResponse.getBody());
 
     // retrieve a null dept
     testResponse = testRouteController.identifyDeptChair(null);
@@ -199,8 +199,8 @@ public class RouteControllerTests {
   public void testAddMajorToDept() {
     // retrieve a non-existing dept
     ResponseEntity<?> testResponse = testRouteController.addMajorToDept("N/A");
-    assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, testResponse.getStatusCode());
-    assertEquals("An Error has occurred", testResponse.getBody());
+    assertEquals(HttpStatus.NOT_FOUND, testResponse.getStatusCode());
+    assertEquals("Department Not Found", testResponse.getBody());
 
     // retrieve a null dept
     testResponse = testRouteController.addMajorToDept(null);
@@ -227,8 +227,8 @@ public class RouteControllerTests {
   public void testRemoveMajorToDept() {
     // retrieve a non-existing dept
     ResponseEntity<?> testResponse = testRouteController.removeMajorFromDept("N/A");
-    assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, testResponse.getStatusCode());
-    assertEquals("An Error has occurred", testResponse.getBody());
+    assertEquals(HttpStatus.NOT_FOUND, testResponse.getStatusCode());
+    assertEquals("Department Not Found", testResponse.getBody());
 
     // retrieve a null dept
     testResponse = testRouteController.removeMajorFromDept(null);
