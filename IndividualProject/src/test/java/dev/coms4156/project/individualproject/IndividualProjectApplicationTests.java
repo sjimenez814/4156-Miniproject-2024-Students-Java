@@ -1,6 +1,5 @@
 package dev.coms4156.project.individualproject;
 
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -11,8 +10,10 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.PrintStream;
 import java.util.HashMap;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -27,13 +28,34 @@ import org.springframework.test.context.ContextConfiguration;
 public class IndividualProjectApplicationTests {
 
   private IndividualProjectApplication application;
+  private ByteArrayOutputStream outputStream;
+  private PrintStream originalOut;
 
   @MockBean
   private MyFileDatabase myFileDatabase;
 
+  /**
+   * Set up tests to redirect System.out to detect print statements later.
+   */
   @BeforeEach
   public void setUp() {
     application = new IndividualProjectApplication();
+    outputStream = new ByteArrayOutputStream();
+    originalOut = System.out;
+    System.setOut(new PrintStream(outputStream));
+  }
+
+  /**
+   * Set the original System.out and close the open stream.
+   */
+  @AfterEach
+  public void closeResources() {
+    System.setOut(originalOut);
+    try {
+      outputStream.close();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
   @Test
@@ -71,26 +93,18 @@ public class IndividualProjectApplicationTests {
 
   @Test
   public void testOnTerminationWhenSaveDataIsTrue() {
-    ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-    PrintStream originalOut = System.out;
-    System.setOut(new PrintStream(outputStream));
     IndividualProjectApplication.saveData = true;
     IndividualProjectApplication app = new IndividualProjectApplication();
     app.onTermination();
     assertTrue(outputStream.toString().contains("Termination"));
-    System.setOut(originalOut);
   }
 
   @Test
   public void testOnTerminationWhenSaveDataIsFalse() {
-    ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-    PrintStream originalOut = System.out;
-    System.setOut(new PrintStream(outputStream));
     IndividualProjectApplication.saveData = false;
     IndividualProjectApplication app = new IndividualProjectApplication();
     app.onTermination();
     assertTrue(outputStream.toString().contains("Termination"));
     verify(myFileDatabase, times(0)).saveContentsToFile();
-    System.setOut(originalOut);
   }
 }

@@ -1,5 +1,6 @@
 package dev.coms4156.project.individualproject;
 
+import java.util.Locale;
 import java.util.Map;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -41,11 +42,11 @@ public class RouteController {
     try {
       Map<String, Department> departmentMapping;
       departmentMapping = IndividualProjectApplication.myFileDatabase.getDepartmentMapping();
-
-      if (!departmentMapping.containsKey(deptCode.toUpperCase())) {
+      String localDeptCode = deptCode.toUpperCase(Locale.ROOT);
+      if (!departmentMapping.containsKey(localDeptCode)) {
         return new ResponseEntity<>("Department Not Found", HttpStatus.OK);
       } else {
-        return new ResponseEntity<>(departmentMapping.get(deptCode.toUpperCase()).toString(),
+        return new ResponseEntity<>(departmentMapping.get(localDeptCode).toString(),
             HttpStatus.OK);
       }
 
