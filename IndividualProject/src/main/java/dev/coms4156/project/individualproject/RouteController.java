@@ -44,7 +44,7 @@ public class RouteController {
       departmentMapping = IndividualProjectApplication.myFileDatabase.getDepartmentMapping();
       String localDeptCode = deptCode.toUpperCase(Locale.ROOT);
       if (!departmentMapping.containsKey(localDeptCode)) {
-        return new ResponseEntity<>("Department Not Found", HttpStatus.OK);
+        return new ResponseEntity<>("Department Not Found", HttpStatus.NOT_FOUND);
       } else {
         return new ResponseEntity<>(departmentMapping.get(localDeptCode).toString(),
             HttpStatus.OK);
