@@ -1,0 +1,6 @@
+https://www.geeksforgeeks.org/unit-testing-in-spring-boot-project-using-mockito-and-junit/
+Used geeksforgeeks to get a refresher on some mockito behaviors and spring annotations
+
+
+https://stackoverflow.com/questions/32241057/how-to-test-a-print-method-in-java-using-junit
+Used this stackoverflow to figure out how to unit test the executable IndividualProjectApplication
