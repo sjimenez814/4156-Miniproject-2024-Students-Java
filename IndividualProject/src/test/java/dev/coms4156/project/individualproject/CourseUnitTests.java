@@ -82,7 +82,7 @@ public class CourseUnitTests {
   @Test
   public void testReassignLocation() {
     String oldLocation = testCourse.getCourseLocation();
-    String newLocation = "833 MUD";
+    String newLocation = "301 URIS";
     testCourse.reassignLocation(newLocation);
     assertEquals(newLocation, testCourse.getCourseLocation());
     assertNotEquals(testCourse.getCourseLocation(), oldLocation);
@@ -91,7 +91,7 @@ public class CourseUnitTests {
   @Test
   public void testReassignTime() {
     String oldTime = testCourse.getCourseTimeSlot();
-    String newTime = "01:10-02:25";
+    String newTime = "2:40-3:55";
     testCourse.reassignTime(newTime);
     assertEquals(newTime, testCourse.getCourseTimeSlot());
     assertNotEquals(testCourse.getCourseTimeSlot(), oldTime);

@@ -74,7 +74,7 @@ public class MyFileDatabaseTests {
   public void testSaveContentsToFile() throws IOException {
     Map<String, Department> mapping = new HashMap<>();
     mapping.put("COMS", new Department("COMS", null, "Dr. Smith", 100));
-    myFileDatabase.setMapping((HashMap<String, Department>) mapping);
+    myFileDatabase.setMapping(mapping);
     myFileDatabase.saveContentsToFile();
     File file = new File(filePath);
     assertTrue(file.exists());
